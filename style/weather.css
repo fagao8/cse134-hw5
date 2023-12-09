@@ -1,0 +1,22 @@
+weather-widget {
+    display: flex;
+    max-width: 50%;
+    background-color: #ECECEC;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(144,144,144,0.3);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+:root {
+    --text-color: black;
+}
+
+weather-widget * {
+    color: var(--text-color, black);
+    font-family: sans-serif;
+    font-size: 20px;
+}
