@@ -24,14 +24,15 @@ fetch(endpoint)
                 elem.style.textShadow = "0px 0px 2px black"
             })
         }
-        fetch(weather.icon.replace(",0", "").replace("small", "large")).then(response => response.blob())
-        .then(img => {
-            const imageUrl = URL.createObjectURL(img);
-            widget.style.backgroundImage = `url(${imageUrl})`;
+        let pattern = /\/land\/([A-z]+)\/([A-z_]+)/
+        let match = weather.icon.match(pattern)
+        if (match) {
+            let img = document.createElement("img")
+            widget.style.backgroundImage = `url("assets/${match[1]}-${match[2]}.png")`
             widget.style.backgroundSize = "cover";
             widget.style.width = "250px"
             widget.style.height = "150px"
-        })
+        }
         msg.style.display = "none";
         temp.style.fontSize = "36px"
         temp.style.alignSelf = "flex-start"
