@@ -3,7 +3,7 @@ weather-widget {
     max-width: 50%;
     background-color: #ECECEC;
     border: 1px solid #CCCCCC;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 20px;
     box-shadow: 2px 2px 5px rgba(144,144,144,0.3);
     flex-direction: column;

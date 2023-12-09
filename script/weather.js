@@ -36,6 +36,8 @@ fetch(endpoint)
         msg.style.display = "none";
         temp.style.fontSize = "36px"
         temp.style.alignSelf = "flex-start"
+        condition.style.fontWeight = "bold"
+        condition.style.alignSelf = "flex-start"
         container.style.display = "flex";
         container.style.justifyContent = "space-between";
         container.style.alignSelf = "flex-start"
