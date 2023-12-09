@@ -13,7 +13,6 @@ fetch(endpoint)
     .then(response => response.json())
     .then(data => {
         const weather = data.properties.periods[0]
-        console.log(data)
         temp.innerHTML = `${weather.temperature}&deg;${weather.temperatureUnit}`;
         condition.innerHTML = weather.shortForecast;
         wind.innerHTML = `<span>Wind</span><br>${weather.windSpeed} ${weather.windDirection}`
