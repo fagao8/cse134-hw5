@@ -24,7 +24,7 @@ fetch(endpoint)
                 elem.style.textShadow = "0px 0px 2px black"
             })
         }
-        fetch(weather.icon.replace(",0", "")).then(response => response.blob())
+        fetch(weather.icon.replace(",0", "").replace("small", "large")).then(response => response.blob())
         .then(img => {
             const imageUrl = URL.createObjectURL(img);
             widget.style.backgroundImage = `url(${imageUrl})`;
