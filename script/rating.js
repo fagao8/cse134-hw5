@@ -15,6 +15,7 @@ for (let i = 1; i <= number; i++) {
     stars.appendChild(star);
     star.style.color = "gray";
     star.style.fontSize = "36px";
+    star.style.cursor = "pointer"
 }
 widget.appendChild(stars);
 const starList = document.querySelectorAll("span");
